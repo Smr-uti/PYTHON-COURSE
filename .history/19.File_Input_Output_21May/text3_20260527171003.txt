@@ -1,0 +1,178 @@
+ Hello World Hello India Hello World Hello India
+
+ # language = 'Python'   # lives in GLOBAL namespace
+#
+# version  = 3.11       # lives in GLOBAL namespace
+# print(language)       # accessible anywhere in script
+#
+# def show():
+#     print(version)    # can READ global from function
+# show()
+#
+# player     = 'Bob'
+# high_score = 4200
+# level      = 7
+#
+# def play_level():
+#     bonus = 500          # LOCAL variable
+#     # global high_score
+#     high_score=0
+#     high_score += bonus  # modify global
+#     print(player)        # reads global
+#     print(high_score)
+#
+# play_level()
+
+# count = 100        # global
+# def show_count():
+#     count = 999    # LOCAL shadow!
+#     print(count)   # → 999
+# show_count()
+# print(count)       # → 100 (unchanged)
+
+# count = 100        # global
+# def update_count():
+#     global count   # ← tell Python!
+#     count = 999    # modifies global
+#     print(count)   # → 999
+# update_count()
+# print(count)       # → 999 ✅
+
+# city       = 'Paris'
+# population = 2_200_000
+# country    = 'France'
+#
+# def city_info():
+#     district = 'Marais'    # local variable
+#     global population
+#     population += 50_000   # modify global
+#     print('Inside locals()  :', locals())
+#     print("===========")
+#     print('Inside globals() :', globals())
+#
+# # Module level — same dict
+# print('Module locals() :', locals())
+# city_info()
+
+# jan_sales = 1500
+# feb_sales = 2200
+# mar_sales = 1800
+#
+# months = ['jan_sales', 'feb_sales', 'mar_sales']
+#
+# for m in months:
+#     print(m, '=', globals()[m])   # string → variable!
+
+# def add(x, y):      return x + y
+# def multiply(x, y): return x * y
+# def subtract(x, y): return x - y
+#
+# operations = ['add', 'multiply', 'subtract']
+#
+# for op in operations:
+#     result = globals()[op](10, 3)   # function name → call!
+#     print(f'{op}(10,3) = {result}')
+
+
+# def order_summary():
+#     item  = 'Coffee'
+#     price = 4.50
+#     print('--- Order Summary ---')
+#
+#     # Inner function — defined inside outer
+#     def show_receipt():
+#         tax   = price * 0.10    # reads outer 'price'!
+#         total = price + tax
+#         print(f'Item:  {item}')
+#         print(f'Price: ${price:.2f}')
+#         print(f'Tax:   ${tax:.2f}')
+#         print(f'Total: ${total:.2f}')
+#
+#     show_receipt()   # called inside outer only
+#
+# order_summary()
+# # show_receipt()   ← NameError! Not accessible outside
+
+# tax_rate = 0.18          # GLOBAL
+#
+# def calc_price():        # OUTER function
+#     base     = 100       # ENCLOSING
+#     discount = 10        # ENCLOSING
+#
+#     def apply_tax():     # INNER function
+#         # Reads ENCLOSING vars: base, discount
+#         # Reads GLOBAL var:     tax_rate
+#         after_disc = base - discount
+#         final = after_disc * (1 + tax_rate)
+#         print(f'After discount: {after_disc}')
+#         print(f'Final price:    {final:.2f}')
+#         # final is LOCAL to apply_tax()
+#
+#     apply_tax()   # call inner fn
+#
+# calc_price()
+
+# country = 'Japan'   # GLOBAL (G)
+#
+# def outer_fn():
+#     city = 'Tokyo'  # ENCLOSING (E)
+#     def inner_fn():
+#         district = 'Shibuya'   # LOCAL (L)
+#         # LEGB lookup trace inside inner_fn:
+#         # district → L (found!) → use it
+#         # city     → L (not found) → E (found!) → use it
+#         # country  → L (no) → E (no) → G (found!) → use it
+#         # print    → L (no) → E (no) → G (no) → B (found!)
+#         print(district, city, country)
+#         print(len(district))  # len is BUILT-IN (B)
+#
+#     inner_fn()
+#
+# outer_fn()
+
+
+
+# # (B) Built-in: min, max, print — always available
+# # (G) Global scope
+# base_wage = 15.0         # GLOBAL
+#
+# def payroll(hours):      # outer function
+#     # (E) Enclosing scope
+#     overtime_rate = 1.5  # ENCLOSING
+#
+#     def compute_pay():   # inner function
+#         # (L) Local scope
+#         regular  = min(hours, 40) * base_wage    # B+E+G
+#         overtime = max(hours - 40, 0)            # B
+#         ot_pay   = overtime * base_wage * overtime_rate  # G+E
+#         total    = regular + ot_pay              # L
+#
+#         # scope annotation:
+#         # L: regular, overtime, ot_pay, total
+#         # E: overtime_rate
+#         # G: base_wage, hours
+#         # B: min, max, print
+#         print(f'Hours:    {hours}')
+#         print(f'Regular:  ${regular:.2f}')
+#         print(f'OT Pay:   ${ot_pay:.2f}')
+#         print(f'Total:    ${total:.2f}')
+#
+#     compute_pay()
+#
+# payroll(50)
+
+
+def outer():
+    score = 45           # outer's score
+    print('outer score:', score)
+    print('outer id:   ', id(score))
+
+    def inner():
+        score = 90       # inner's OWN score — different!
+        print('inner score:', score)
+        print('inner id:   ', id(score))
+
+    inner()
+
+outer()
+# Output: outer
