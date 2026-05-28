@@ -1,0 +1,1 @@
+pets=["cat\n", "dog\n", "b"]

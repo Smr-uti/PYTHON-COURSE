@@ -7,10 +7,10 @@
 # print(result)
 
 
-# fobj6=open("text4.txt","r")
+'# fobj6=open("text4.txt","r")
 # result=fobj6.readline()
-# print(result)
+# print(result)'
 
-fobj6=open("text4.txt","r")
-result=fobj6.readlines()
-print(result)   
+# fobj6=open("text4.txt","r")
+# result=fobj6.readlines()
+# print(result)   
