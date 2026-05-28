@@ -1,1 +1,1 @@
-Day 3 - TupleDay 4 - Set
+Day 3 - TupleDay 4 - SetDay 5 - DictionaryDay 6 - filter, map, reduce
