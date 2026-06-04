@@ -28,4 +28,4 @@ print(obj2.mileage)
 
 obj2.display_info()
 
-print("End Program") 
+print("End Program")
