@@ -9,7 +9,3 @@ obj1=BankATM()
 obj1.method1()
 
 print(obj1.name)
-
-
-
-
