@@ -1,1 +1,0 @@
-pets=["cat\n", "dog\n", ]
