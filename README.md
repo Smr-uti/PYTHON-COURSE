@@ -26,8 +26,6 @@ My goal is to master Python programming to build intelligent applications and au
 
 ○ Object-Oriented Programming (OOP)
 
-○ Agentic AI Integration & API usage
-
 ## 🛠️ Tech Stack
 ○ **Language:** Python 3.x
 
