@@ -40,8 +40,6 @@ Open VS Code.
 
 Review notes or previous day's code.
 
-Complete current modules and practice exercises.
-
 Push progress to GitHub to maintain a consistent record.
 
 Document any errors or breakthroughs in the /notes folder.
