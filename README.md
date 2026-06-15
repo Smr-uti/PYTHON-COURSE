@@ -33,7 +33,7 @@ My goal is to master Python programming to build intelligent applications and au
 
 ○ **Tools:** Jupyter Notebook, Git/GitHub
 
-○ **AI Assistants:** Gemini (for logic, debugging, and learning support)
+○ **AI Assistants:** Gemini (for logic, debugging, and learning support), Claude 
 
 ## 💡 Daily Workflow
 Open VS Code.
