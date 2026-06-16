@@ -1,0 +1,23 @@
+class User:
+    def __init__(self):
+        self.name = "Ganesh"
+        self.gender = "Male"
+
+    def login(self):
+        print("Login")
+
+
+class Student(User):
+    def __init__(self):
+        self.rollno = 100
+
+    def enroll(self):
+        print("Enroll")
+
+u = User()
+s = Student()
+
+s.login()
+s.enroll()
+
+print(s)
