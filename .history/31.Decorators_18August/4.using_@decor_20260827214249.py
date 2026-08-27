@@ -7,7 +7,6 @@ def decor2(func):
     def inner():
         return func().split()
     return inner
-
 @decor2
 @decor1
 def get_name():

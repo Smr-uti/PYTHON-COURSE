@@ -8,7 +8,6 @@ def decor2(func):
         return func().split()
     return inner
 
-@decor2
 @decor1
 def get_name():
     first_name=input("Enter your first name: ")

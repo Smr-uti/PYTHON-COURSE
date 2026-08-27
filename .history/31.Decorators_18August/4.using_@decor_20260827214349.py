@@ -9,7 +9,7 @@ def decor2(func):
     return inner
 
 @decor2
-@decor1
+#@decor1
 def get_name():
     first_name=input("Enter your first name: ")
     sir_name=input("Enter your sirname: ")

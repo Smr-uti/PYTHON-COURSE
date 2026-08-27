@@ -1,0 +1,12 @@
+
+
+
+
+
+
+
+
+
+def get_name():
+    first_name=input("Enter your first name: ")
+        first_name=input("Enter your  name: ")

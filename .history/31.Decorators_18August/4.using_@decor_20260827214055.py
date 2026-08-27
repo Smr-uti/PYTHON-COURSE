@@ -8,12 +8,11 @@ def decor2(func):
         return func().split()
     return inner
 
-@decor2
 @decor1
 def get_name():
     first_name=input("Enter your first name: ")
     sir_name=input("Enter your sirname: ")
-    full_name= first_name + " " + sir_name
-    return full_name
+    ge= first_name + " " + sir_name
+    return full
 
 print(get_name())
