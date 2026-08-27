@@ -1,0 +1,20 @@
+def decor(func):
+    def inner():
+        result = func()
+        num3 = float(input("Enter third number: "))
+        result2= result + num3
+        return result
+    return inner
+    
+        
+def addition():
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+
+    result = num1 + num2
+    return result
+
+
+addition = decor(addition)
+print("Addition is ", addition())
+
