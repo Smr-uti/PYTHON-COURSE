@@ -1,0 +1,6 @@
+L = [1,2,3,4,5]
+print(type(L))
+
+print(iter(L))
+
+print(type(iter))
