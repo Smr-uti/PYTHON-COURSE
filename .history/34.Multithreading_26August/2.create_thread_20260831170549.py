@@ -1,0 +1,7 @@
+from threading import Thread
+
+def display():
+    print("Jay shree ganesh!")
+
+response=display()
+print(res)

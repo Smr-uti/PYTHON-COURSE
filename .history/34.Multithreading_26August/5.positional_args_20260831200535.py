@@ -1,0 +1,7 @@
+from threading import Thread
+
+def display(msg, times):
+    pass
+
+t1=Thread(target=display, args=("jay ganesh.!!", 10))
+
